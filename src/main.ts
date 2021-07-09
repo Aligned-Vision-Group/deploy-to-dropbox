@@ -9,7 +9,7 @@ const accessToken = core.getInput('DROPBOX_ACCESS_TOKEN')
 const globSource = core.getInput('GLOB')
 const dropboxPathPrefix = core.getInput('DROPBOX_DESTINATION_PATH_PREFIX')
 const isDebug = core.getInput('DEBUG')
-const nameSpace = String(core.getInput('NAMESPACE_ID'))
+const nameSpace = core.getInput('NAMESPACE_ID')
 //const dropbox = new Dropbox({accessToken, fetch: fetch2})
 const dropbox = new Dropbox({accessToken, fetch: fetch2, nameSpace})
 
