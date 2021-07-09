@@ -25,3 +25,6 @@ inputs:
     description: "Enable debugging."
     required: false
 
+  NAMESPACE_ID:
+    description: "Allow Access to team folders. "
+    required: false
