@@ -17115,8 +17115,8 @@ var accessToken = core.getInput('DROPBOX_ACCESS_TOKEN');
 var globSource = core.getInput('GLOB');
 var dropboxPathPrefix = core.getInput('DROPBOX_DESTINATION_PATH_PREFIX');
 var isDebug = core.getInput('DEBUG');
-//var nameSpace = core.getInput('NAMESPACE_ID');
-var dropbox = new Dropbox({ accessToken: accessToken, fetch: fetch2, pathRoot: "5515695168" });
+var nameSpace = String(core.getInput('NAMESPACE_ID'));
+var dropbox = new Dropbox({ accessToken: accessToken, fetch: fetch2, pathRoot: nameSpace });
 function uploadMuhFile(filePath) {
     var file = fs.readFileSync(filePath);
     var destinationPath = "" + dropboxPathPrefix + filePath;
