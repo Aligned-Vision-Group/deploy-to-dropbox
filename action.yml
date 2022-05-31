@@ -31,6 +31,5 @@ inputs:
     
 outputs:
   Error:
-    Description: "Reports any errors"
   ErrorFlag:
-    Description: "Flags any errors"
+
