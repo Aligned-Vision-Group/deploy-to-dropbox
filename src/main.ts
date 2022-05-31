@@ -26,6 +26,7 @@ function uploadMuhFile(filePath: string): Promise<any> {
     .catch((error: any) => {
       if (isDebug) console.error(error)
       return error
+      core.setFailed(`Action failed with error ${error}`);
     })
 }
 
@@ -37,5 +38,6 @@ glob(globSource, {}, (err: any, files: string[]) => {
     })
     .catch((err) => {
       console.error('error', err)
+      core.setFailed(`Action failed with error ${error}`);
     })
 })
