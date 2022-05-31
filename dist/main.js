@@ -27,6 +27,7 @@ function uploadMuhFile(filePath) {
         if (isDebug)
             console.error(error);
         core.setOutput('Error', error);
+        core.setOutput('ErrorFlag', true);
         return error;
     });
 }
@@ -40,5 +41,6 @@ glob(globSource, {}, function (err, files) {
         .catch(function (err) {
         console.error('error', err);
         core.setOutput('Error', err);
+        core.setOutput('ErrorFlag', true);
     });
 });
