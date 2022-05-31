@@ -38,6 +38,6 @@ glob(globSource, {}, (err: any, files: string[]) => {
     })
     .catch((err) => {
       console.error('error', err)
-      core.setFailed(`Action failed with error ${error}`);
+      core.setFailed(`Action failed with error ${err}`);
     })
 })
