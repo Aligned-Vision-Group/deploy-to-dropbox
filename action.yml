@@ -28,3 +28,9 @@ inputs:
   NAMESPACE_ID:
     description: "Allow Access to team folders. "
     required: false
+    
+outputs:
+  Error:
+    Description: "Reports any errors"
+  ErrorFlag:
+    Description: "Flags any errors"
